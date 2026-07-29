@@ -1,4 +1,8 @@
 FROM ubuntu:17.10
+
+RUN sed -i 's|archive.ubuntu.com|old-releases.ubuntu.com|g' /etc/apt/sources.list
+RUN sed -i 's|security.ubuntu.com|old-releases.ubuntu.com|g' /etc/apt/sources.list
+
 RUN apt-get -y update
 RUN apt-get -y upgrade
 
